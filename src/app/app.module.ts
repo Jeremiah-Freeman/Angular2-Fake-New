@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { BreakingNewsComponent } from './breaking-news/breaking-news.component';
 import { routing } from './app.routing';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { routing } from './app.routing';
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    BreakingNewsComponent
+    BreakingNewsComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,

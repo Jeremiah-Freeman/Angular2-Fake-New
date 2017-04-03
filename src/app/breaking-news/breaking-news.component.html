@@ -2,6 +2,13 @@
   The news is broken
 </h2>
 
-<p>
-  Jay thinks he's a genius but he is only a lonely genie trapped in a one demon-itional bottle of eternal fire and damnation. 
-</p>
+<div *ngFor="let article of articles" (click)="goToDetailPage(article)"  class="panel panel-default">
+<div class="panel-body">
+  <img src="{{article.image}}" alt="{{article.title}}"/>
+  <h3><em>{{article.title}}</em> by {{article.author}}</h3>
+  <p>
+    {{article.story}}
+  </p>
+
+</div>
+</div>
