@@ -6,7 +6,7 @@
     "Dan Lauby - Jay Freeman"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/jaythinkshappiness/Angular2-Fake-New",
   "ignore": [
     "**/.*",
     "node_modules",
