@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { AdminComponent } from './admin/admin.component';
 
 
 export const firebaseConfig = {
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     AboutComponent,
     BreakingNewsComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

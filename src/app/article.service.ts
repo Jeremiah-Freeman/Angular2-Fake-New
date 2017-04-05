@@ -6,7 +6,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class ArticleService {
+
   articles: FirebaseListObservable<any[]>;
+
   constructor(private angularFire: AngularFire) {
    this.articles = angularFire.database.list('articles');}
 
@@ -14,11 +16,16 @@ export class ArticleService {
     return this.articles;
   }
 
-  getArticleById(articleId: number) {
-    for (var i = 0; i <= ARTICLES.length - 1; i++) {
-      if (ARTICLES[i].id === articleId) {
-        return ARTICLES[i];
-      }
-    }
+  addArticle(newArticle: Article) {
+    this.articles.push(newArticle);
+  }
+
+  getArticleById(articleId: number)
+  {
+    // for (var i = 0; i <= ARTICLES.length - 1; i++) {
+    //   if (ARTICLES[i].id === articleId) {
+    //     return ARTICLES[i];
+    //   }
+    // }
   }
 }

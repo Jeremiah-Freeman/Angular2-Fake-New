@@ -13,7 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class BreakingNewsComponent {
   articles: FirebaseListObservable<any[]>;
-  
+
   constructor(private router: Router, private articleService: ArticleService) {}
 
   ngOnInit(){
@@ -21,6 +21,6 @@ export class BreakingNewsComponent {
   }
 
   goToDetailPage(clickedArticle: Article) {
-    this.router.navigate(['article', clickedArticle.id]);
+    // this.router.navigate(['article', clickedArticle.id]);
   };
 }

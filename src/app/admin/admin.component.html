@@ -1,0 +1,32 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add New Articles to Show</h3>
+    <div>
+      <div>
+        <label>Articles Author:</label>
+        <br>
+        <input #newAuthor>
+      </div>
+
+      <div>
+        <label>Articles Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Articles Image URL:</label>
+        <br>
+        <input #newImage>
+      </div>
+
+      <div>
+        <label>Articles Story:</label>
+        <br>
+        <textarea #newStory></textarea>
+      </div>
+      <button (click)="submitForm(newAuthor.value, newTitle.value, newStory.value, newImage.value); newAuthor.value=''; newTitle.value=''; newStory.value=''; newImage.value='';">Add</button>
+    </div>
+  </div>
+</div>
