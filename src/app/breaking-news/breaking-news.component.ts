@@ -20,7 +20,7 @@ export class BreakingNewsComponent {
     this.articles = this.articleService.getArticles();
   }
 
-  goToDetailPage(clickedArticle: Article) {
-    // this.router.navigate(['article', clickedArticle.id]);
+  goToDetailPage(clickedArticle) {
+    this.router.navigate(['article', clickedArticle.$key]);
   };
 }

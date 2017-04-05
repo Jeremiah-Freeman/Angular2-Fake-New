@@ -1,6 +1,6 @@
 <div>
-  <h3>{{articleToDisplay.title}}</h3>
-  <h4>{{articleToDisplay.author}}</h4>
-  <img src="{{articleToDisplay.image}}" alt="{{articleToDisplay.title}}" />
-  <p>{{articleToDisplay.story}}</p>
+  <h3>{{(articleToDisplay | async)?.title}}</h3>
+  <h4>{{(articleToDisplay | async)?.author}}</h4>
+  <img src="{{(articleToDisplay | async)?.image}}" alt="{{(articleToDisplay | async)?.title}}" />
+  <p>{{(articleToDisplay | async)?.story}}</p>
 </div>

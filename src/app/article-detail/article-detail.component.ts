@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Article } from '../article.model';
 import { ArticleService } from '../article.service';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-article-detail',
@@ -10,9 +11,10 @@ import { ArticleService } from '../article.service';
   styleUrls: ['./article-detail.component.css'],
   providers: [ArticleService]
 })
+
 export class ArticleDetailComponent implements OnInit {
-  articleId: number;
-  articleToDisplay: Article;
+  articleId: string;
+  articleToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +24,9 @@ export class ArticleDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-    this.articleId = parseInt(urlParameters['id']);
+    this.articleId = urlParameters['id'];
     });
-    // this.articleToDisplay = this.articleService.getArticleById(this.articleId);
+    this.articleToDisplay = this.articleService.getArticleById(this.articleId);
+
   }
 }
