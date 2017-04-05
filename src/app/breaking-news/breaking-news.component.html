@@ -2,7 +2,7 @@
   The news is broken
 </h2>
 
-<div *ngFor="let article of articles" (click)="goToDetailPage(article)"  class="panel panel-default">
+<div *ngFor="let article of articles | async" (click)="goToDetailPage(article)"  class="panel panel-default">
 <div class="panel-body">
   <img src="{{article.image}}" alt="{{article.title}}"/>
   <h3><em>{{article.title}}</em> by {{article.author}}</h3>

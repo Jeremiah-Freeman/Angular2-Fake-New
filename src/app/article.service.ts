@@ -6,11 +6,12 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class ArticleService {
-  artiles: FirebaseListObservable<any[]>;
-  constructor(private angularFire: AngularFire) { }
+  articles: FirebaseListObservable<any[]>;
+  constructor(private angularFire: AngularFire) {
+   this.articles = angularFire.database.list('articles');}
 
   getArticles() {
-    return ARTICLES;
+    return this.articles;
   }
 
   getArticleById(articleId: number) {
